@@ -17,6 +17,5 @@
 //= require typed.min
 //= require jquery.bxslider.min
 //= require jquery-smooth-scroll
-//= require emailProtector
 //= require lightgallery-all.min
 //= require custom
