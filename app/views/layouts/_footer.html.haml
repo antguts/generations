@@ -1,9 +1,23 @@
-%footer{role: 'contentinfo'}
-  %ul
-    %li
-      = link_to 'About', about_path, title: ''
-    %li
-      = link_to 'Contact', contact_path, title: ''
-  %p.copyright
-    &copy; XXX
-    = Date.today.year
+%footer{role: 'contentinfo', class: 'footer'}
+  .container
+    %section
+      .footer-left
+        %ul
+          %li.fade= link_to 'Home', root_path
+          %li= link_to 'About', about_path
+          %li= link_to 'Stylists', stylists_path
+          %li= link_to 'Products', products_path
+          %li= link_to 'Gallery', gallery_path
+          %li= link_to 'Services', services_path
+          %li= link_to 'Contact', contact_path
+          %li= link_to 'F.A.Q', faq_path
+
+      .footer-right
+        = render 'shared/social_links'
+        = render 'shared/phone_number'
+        = render 'shared/email_encryptor'
+        = render 'shared/snail_mail'
+      %p.copyright
+        &copy; Generations Hair Salon
+        = Date.today.year
+

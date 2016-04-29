@@ -18,13 +18,17 @@ html
   -webkit-font-smoothing: antialiased
 
 body
-  margin: 0 auto
-  width: 960px
   background-color: $bg-body
 
+.container
+  +container()
+  +show-grid(12)
+  background-color: $white
 
-*, *:before, *:after
-  +box-sizing(border-box)
+  +breakpoint($g-uber-wide)
+    max-width: 1440px
+
+$internal-padding: 20px
 
 
 /* Media
@@ -32,7 +36,6 @@ body
 
 audio,
 canvas,
-iframe,
 img,
 svg,
 video
@@ -48,30 +51,96 @@ img
 // navigation in _navigation.sass
 
 header
-  height: 60px
-  margin-bottom: 10px
-  background-color: $bg-header
+  top: 0
+  right: 0
+  left: 0
+  position: fixed
+  padding-bottom: 10px
+  margin-bottom: 20px
+  background-color: $green
+  z-index: 2000
+  .container
+    @extend .white-text
+    background-color: $green
+
 
 .logo
-  float: left
-  margin: 10px 0 0 0
-  +link-colors($link-logo, $link-logo, $link-logo, $link-logo, $link-logo)
+  +span(3 of 12)
+  a
+    display: block
+    width: 150px
+    height: 26px
+    margin: 10px 0 0 10px
+    background: image-url("logos/g-logo.jpg") 0 0 no-repeat
+
+    +breakpoint($g-layout)
+      margin-left: 5px
+
+  +breakpoint($g-tablet)
+    +span(4 of 12)
+    a
+      width: 300px
+      height: 51px
+      background: image-url("logos/g-logo.jpg") 0 0 no-repeat
+
+.hero
+  margin-bottom: 20px
+
 
 
 /* Footer
   ----------------------- */
 
-footer
-  height: 100px
-  margin-top: 30px
-  ul
-    margin-bottom: 5px
-    li
-      display: inline-block
-      padding: 0 10px
-    li:first-child
-      padding-left: 0
+.footer
+  height: 91px
+  bottom: 0
+  right: 0
+  left: 0
+  z-index: 200
   p
-    margin-top: 0
-    font-size: 75%
-    color: $font-gray
+    clear: both
+    margin: 0
+  .container
+    @extend .white-text
+    background-color: $dark-gray
+    ul
+      list-style-type: none
+      padding: 0 10px 0
+      a
+        border: 1px solid $dark-gray
+      a:hover
+        text-decoration: none
+        border-radius: 5px
+        background-color: $cyan
+    section
+      padding-top: 0
+
+  .footer-left
+    text-align: center
+    li
+      margin-right: 10px
+      display: inline-block
+
+  .footer-right
+    +hide
+    &:nth-child(1)
+      +span(2 of 6)
+    &:nth-child(2)
+      +span(2 of 6)
+    &:nth-child(3)
+      +span(2 of 6 last)
+
+  +breakpoint($g-tablet)
+    .footer-left
+      +span(6 of 12)
+    .footer-right
+      +reveal-hidden-inline
+      +span(6 of 12 last)
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+- content_for :title do
+  Gallery
+= nav_at 'gallery'
+
+.gallery
+  %section.hero
+    %h1.note Image of all stylists together
+
+  .container
+    %section
+      - 5.times do
+        %h2.note **Service**
+        %br
+        %br
+        %br
+        - 5.times do
+          .student
+            %img{:src => 'http://dummyimage.com/250x250/999/000&text=Gallery+Pic', :alt => 'dummy image'}
+            %h4.stylist

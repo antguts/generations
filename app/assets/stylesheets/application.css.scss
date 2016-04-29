@@ -1,7 +1,6 @@
 /* DEFINITIONS
   ============================================================================ */
 // @import "modular_scale";
-@import "colors";
 @import "define";
 
 
@@ -25,8 +24,37 @@ ol, ul {
 /* BASIC STRUCTURE
   ============================================================================ */
 @import "susy";
-@import "z_index";
+@import "breakpoint";
+
+$susy: (
+  columns: 12,
+  container: 1240px,
+  gutters: .15,
+  // gutter-position: inside,
+  global-box-sizing: border-box,
+  debug: (
+    image: show-columns,
+    color: rgba(#66b3dc, 0.25),
+    // output: background,
+    output: overlay,
+    toggle: bottom right
+    )
+  );
+
+@include border-box-sizing;
+
+// breakpoints...
+
+$g-tiny: 500px;
+$g-mobile: max-width 792px;
+$g-tablet: 793px;
+$g-desktop: 1150px;
+$g-layout: 1240px;
+$g-uber-wide: 1900px;
+
+@import 'z_index';
 @import "desktop/layout";
+@import "desktop/tiles";
 
 
 /* TYPOGRAPHY
@@ -53,6 +81,7 @@ ol, ul {
 /* PAGES
   ============================================================================ */
 @import "desktop/pages";
+@import "dev_dashboard";
 
 
 /* STAGING - new styles for front-end folks to review and integrate
@@ -63,6 +92,7 @@ ol, ul {
 /* APPLICATION - ad hoc code under this line
   ============================================================================ */
 
+@import "lightgallery";
 
 
 /* LAST

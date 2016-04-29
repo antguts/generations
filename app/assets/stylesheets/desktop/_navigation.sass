@@ -1,15 +1,206 @@
+/* Button
+  ----------------------- */
+
+.nav-button,
+.nav-x
+  position: fixed
+  top: 8px
+  right: 15px
+  cursor: pointer
+  fill: #fff
+
+  +breakpoint($g-tablet)
+    top: 15px
+
+  +breakpoint($g-layout $g-uber-wide)
+    right: calc(50% - 620px)
+
+  +breakpoint($g-uber-wide)
+    right: calc(50% - 720px)
+
+.nav-button
+  +z-index(nav-button)
+.nav-x
+  fill: #fff
+
+
+/* Utility
+  ----------------------- */
+
+.utility
+  +hide
+  margin-top: 11px
+  ul
+    margin: 0
+    text-align: right
+  li
+    display: inline-block
+    padding: 0 10px
+    list-style-type: none
+    border-right: 1px solid $base-font-color
+  .active
+    color: $green
+    font-weight: bold
+  #dt-contact,
+  #m-contact
+    border-right: none
+
+  +breakpoint($g-tiny)
+    +reveal-hidden
+    +span(9 of 12 last)
+    ul
+      padding-right: 50px
+
+  +breakpoint($g-tablet)
+    +span(8 of 12 last)
+    margin-top: 19px
+    ul
+      padding-right: 60px
+
+  +breakpoint($g-desktop $g-uber-wide)
+    ul
+      padding-right: 70px
+
+  +breakpoint($g-uber-wide)
+    ul
+      padding-right: 70px
+
+
 /* Main
   ----------------------- */
 
-nav
-  float: left
-  margin: 25px 0 0 250px
+.nav-overlay
+  display: none
+  position: fixed
+  top: 0
+  right: 0
+  width: 100%
+  height: 471px
+  color: #fff
+  overflow: hidden
+  background-color: $green
+  +z-index(nav-overlay)
 
-ul#nav
-  +inline-block-list
-  li
-    padding: 0 20px
-    font-family: $font-family-nav
+  .container
+    background: image-url("logos/primary-code-icon-white.png") 50% -20px no-repeat
+
+  ul#nav
+    list-style: none
+    +span(9 of 12)
+    +pre(1 of 12)
+    margin-top: 50px
+    margin-bottom: 0
+    > li
+      text-transform: uppercase
+      border-top: 1px solid $white
+      &:hover
+        text-decoration: none
+        width: 100%
+        border: 1px solid $white
+        background-color: $white
+        a
+          color: $green
+    li
+      padding: 5px 0
+    ul
+      list-style: inside circle
+      li
+        text-transform: capitalize
+
+    .last
+      border-bottom: 1px solid $white
+
+    +breakpoint($g-tiny)
+      +span(6 of 12)
+
+    +breakpoint($g-tablet)
+      +span(4 of 12)
+
+    +breakpoint($g-desktop)
+      +span(3 of 12)
+
+  a
     +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
-  li:first-child
-    padding-left: 0
+  .active
+    font-weight: bold
+    ul
+      font-weight: normal
+
+  .nav-box-1,
+  .nav-box-2,
+  .nav-box-3
+    +hide
+    +breakpoint($g-tablet)
+      +reveal-hidden
+      +span(5 of 12 last)
+      +post(1 of 12)
+      margin-top: 50px
+
+    +breakpoint($g-desktop)
+      +span(6 of 12 last)
+      +post(1 of 12)
+
+
+  .nav-box-2
+    margin-top: 20px
+
+  .nav-box-3
+    margin-top: 20px
+
+
+
+#dt-home,
+#dt-programs,
+#dt-apply,
+#dt-contact
+  +hide
+
++breakpoint(600px)
+  #dt-home
+    +reveal-hidden-inline
+
++breakpoint($g-tablet)
+  #m-programs,
+  #m-apply,
+  #m-contact
+    +hide
+  #dt-home,
+  #dt-programs,
+  #dt-apply,
+  #dt-contact
+    +reveal-hidden-inline
+
+.no-js
+  .nav-button,
+  .nav-x
+    display: none
+  .nav-overlay
+    display: block
+    position: relative
+    background: none
+    .snail-mail,
+    .apply,
+    .join
+      display: none
+  .utility
+    display: none
+  nav
+    +span(11 of 12 last)
+    margin-top: 17px
+    ul#nav
+      width: 100%
+      margin: 0
+      ul
+        display: none
+    li
+      display: block
+      float: left
+      list-style-type: none
+      padding: 0 10px
+      border-right: 1px solid $base-font-color
+      &:last-child
+        border-right: none
+    a
+      +link-colors($link-normal, $link-hover, $link-active, $link-visited, $link-focus)
+    .active
+      font-weight: bold

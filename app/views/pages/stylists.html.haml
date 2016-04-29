@@ -1,0 +1,23 @@
+- content_for :title do
+  stylists
+= nav_at 'Stylists'
+
+.stylists
+  %section.hero
+    %h1 Our stylists
+    %h2 Featuring
+
+  .container
+    %section
+      %h2 Generations Staff
+      %p Experienced stylists with a wide array of services.
+      %div= link_to 'See Our Gallery', gallery_path
+      %br
+      %br
+      %br
+      - 10.times do
+        .stylist
+          %img{:src => 'http://dummyimage.com/250x250/999/000&text=Stylists+Pic', :alt => 'dummy image'}
+          %h4 Anthony Gutilla
+          %p.note Stylists Bio Here
+          = render 'shared/social_links'

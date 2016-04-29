@@ -1,0 +1,129 @@
+// For toggling between phone number markup
+
+.callto
+  position: absolute
+  top: -9999px
+  left: -9999px
+  +hide
+
++breakpoint($g-desktop)
+  .tel
+    position: absolute
+    top: -9999px
+    left: -9999px
+    +hide
+
+  .callto
+    position: relative
+    top: auto
+    left: auto
+    +reveal-hidden-inline
+
+
+/* Colors
+  ----------------------- */
+
+.green
+  background-color: rgba($green, 1)
+.forest-green
+  background-color: rgba($forest-green, 1)
+.kiwi
+  background-color: rgba($kiwi, 1)
+.dark-green
+  background-color: rgba($dark-green, 1)
+
+.red
+  background-color: rgba($red, 1)
+.blue
+  background-color: rgba($blue, 1)
+.yellow
+  background-color: rgba($yellow, 1)
+.cyan
+  background-color: rgba($cyan, 1)
+.magenta
+  background-color: rgba($magenta, 1)
+
+.white
+  background-color: rgba($white, 1)
+.whitish
+  background-color: rgba($whitish, 1)
+.white-smoke
+  background-color: rgba($white-smoke, 1)
+.dark-white
+  background-color: rgba($dark-white, 1)
+
+.gray
+  background-color: rgba($gray, 1)
+.med-gray
+  background-color: rgba($med-gray, 1)
+.dark-gray
+  background-color: rgba($dark-gray, 1)
+
+.black
+  background-color: rgba($black, 1)
+.blackish
+  background-color: rgba($blackish, 1)
+.charcoal
+  background-color: rgba($charcoal, 1)
+
+
+/* Pages
+  ----------------------- */
+
+section
+  padding: $internal-padding
+  overflow: hidden
+
+.hero
+  height: 400px
+  margin-top: 91px
+  @extend .white-text
+
+.web-dev .hero
+  background-color: $green
+.part-time .hero
+  background-color: $black
+.products .hero
+  background-color: $yellow
+.launch .hero
+  background-color: $magenta
+.tuition .hero
+  background-color: $black
+.employers .hero
+  // background-color: $
+.stylists .hero
+  background-color: $black
+.alumni .hero
+  background-color: $black
+.blog .hero
+  // background-color: $
+.apply .hero
+  background-color: $green
+.contact .hero
+  background-color: $black
+
+
+/* Tile Elements
+  ----------------------- */
+
+.t-more
+  display: inline-block
+  position: absolute
+  bottom: 10px
+  right: 10px
+
+
+/* Course Pages
+  ----------------------- */
+
+.what, .where, .when
+  +span(4 of 12)
+.when
+  margin-right: 0
+.edu-icons li
+  display: inline-block
+  margin-right: 20px
+.instructor
+  float: left
+  width: 150px
+  margin-right: 20px

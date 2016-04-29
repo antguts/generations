@@ -1,0 +1,11 @@
+- content_for :main_navigation do
+  %nav{role: "navigation"}
+    %a{:href => '#main', :title => '', :class => 'screen-reader-text'} Skip to main content
+    %ul#nav
+      = nav_to 'Home', home_path
+      = nav_to 'About', about_path
+      = nav_to 'Stylists', stylists_path
+      = nav_to 'Products', products_path
+      = nav_to 'Gallery', gallery_path
+      = nav_to 'Services', services_path
+      = nav_to 'Contact', contact_path

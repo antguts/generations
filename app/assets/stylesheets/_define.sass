@@ -1,3 +1,49 @@
+/* Colors
+  ----------------------- */
+
+// Green color palette...
+
+
+$forest-green:      #2C5519
+$dark-green:        #45802A
+$green:             #55921F
+$kiwi:              #82C169
+
+// color palette...
+
+$red:               #d62323
+$blue:              #295ca4
+
+$yellow:            #feed01
+$cyan:              #09b299
+$magenta:           #b212b2
+
+
+// other colors...
+
+$white:             #fff
+$whitish:           #fcfcfc
+$white-smoke:       #f5f5f5
+$dark-white:        #f2f2f2
+
+$gray:              #999
+$med-gray:          #737373
+$dark-gray:         #404040
+
+$black:             #262626
+$blackish:          #444
+$charcoal:          #3e454c
+
+$alert-lgt-blu:     #eaeff5
+$alert-drk-blu:     #33689a
+$alert-lgt-grn:     #f4f7f0
+$alert-drk-grn:     #669934
+$alert-lgt-ylo:     #ffffd9
+$alert-drk-orj:     #cc682a
+$alert-lgt-red:     #f9eae5
+$alert-drk-red:     #cf3303
+
+
 /* Fonts
   ----------------------- */
 
@@ -20,12 +66,12 @@ $droid-sans:           "Droid Sans", Helvetica, Arial, sans-serif
 
 // embedded fonts...
 
-// @font-face
-//   font-family: 'FONT_NAME'
-//   font-weight: normal
-//   font-style: normal
-//   src: font-url('FONT_NAME.eot')
-//   src: font-url('FONT_NAME.eot?#iefix') format("embedded-opentype"), font-url('FONT_NAME.svg#FONT_NAME') format("svg"), font-url('FONT_NAME.woff') format("woff"), font-url('FONT_NAME.ttf') format("truetype")
+@font-face
+  font-family: 'lg'
+  src: font-url('lg.eot?n1z373')
+  src: font-url('lg.eot?#iefixn1z373') format('embedded-opentype'), font-url('lg.woff?n1z373') format('woff'), font-url('lg.ttf?n1z373') format('truetype'), font-url('lg.svg?n1z373#lg') format('svg')
+  font-weight: normal
+  font-style: normal
 
 // base definitions...
 
@@ -42,12 +88,12 @@ $font-family-button:   $droid-serif      !default
 
 // icon fonts...
 
-// @font-face
-//   font-family: 'icon-fonts'
-//   font-weight: normal
-//   font-style: normal
-//   src: font-url('icon-fonts.eot')
-//   src: font-url('icon-fonts.eot?#iefix') format("embedded-opentype"), font-url('icon-fonts.svg#icon-fonts') format("svg"), font-url('icon-fonts.woff') format("woff"), font-url('icon-fonts.ttf') format("truetype")
+@font-face
+  font-family: 'icon-fonts'
+  font-weight: normal
+  font-style: normal
+  src: font-url('icon-fonts.eot')
+  src: font-url('icon-fonts.eot?#iefix') format("embedded-opentype"), font-url('icon-fonts.svg#icon-fonts') format("svg"), font-url('icon-fonts.woff') format("woff"), font-url('icon-fonts.ttf') format("truetype")
 
 
 /* Color Applications
@@ -55,7 +101,7 @@ $font-family-button:   $droid-serif      !default
 
 // backgrounds...
 
-$bg-body:           $white
+$bg-body:           $whitish
 $bg-container:      $white
 $bg-header:         $white
 $bg-nav:            $white
@@ -69,20 +115,15 @@ $font-gray:         $gray
 // links...
 
 $link-logo:         darken($blue, 10)
-$link-nav:          darken($blue, 10)
+// $link-nav:          darken($blue, 10)
+$link-nav:          $white
+$link-white:        $white
 
 $link-normal:       darken($blue, 10)
 $link-hover:        lighten($blue, 10)
 $link-active:       darken($blue, 10)
 $link-visited:      darken($blue, 10)
 $link-focus:        darken($blue, 10)
-
-// common alternative:
-// $link-normal:       #0645ad
-// $link-hover:        #3366bb
-// $link-active:       #669934
-// $link-visited:      #7f007f
-// $link-focus:        #669934
 
 // miscellaneous...
 
