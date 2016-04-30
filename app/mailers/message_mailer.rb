@@ -7,7 +7,4 @@ class MessageMailer < ApplicationMailer
 
     mail to: "admin@generationsahairsalon.com", subject: "Contact Us Form - #{message.name}"
   end
-
-    mail to: "admin@generationsahairsalon.com", subject: "Launch Form - #{message.name}"
-  end
 end

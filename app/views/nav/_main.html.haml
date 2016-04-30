@@ -9,13 +9,12 @@
 
   .utility
     %ul
-      = nav_to 'Home', root_path
-      = nav_to 'About', about_path
-      = nav_to 'Stylists', stylists_path
-      = nav_to 'Products', products_path
-      = nav_to 'Gallery', gallery_path
-      = nav_to 'Services', services_path
-      = nav_to 'Contact', contact_path
+      = nav_to 'Home', root_path, class: "nav-link"
+      = nav_to 'About', about_path, class: "nav-link"
+      = nav_to 'Stylists', stylists_path, class: "nav-link"
+      = nav_to 'Products', products_path, class: "nav-link"
+      = nav_to 'Gallery', gallery_path, class: "nav-link"
+      = nav_to 'Services', services_path, class: "nav-link"
 
   %nav{role: 'navigation', class: 'nav-overlay'}
     .nav-x
