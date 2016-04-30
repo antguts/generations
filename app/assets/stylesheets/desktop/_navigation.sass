@@ -5,7 +5,7 @@
 .nav-x
   position: fixed
   top: 8px
-  right: 15px
+  right: 19px
   cursor: pointer
   fill: #fff
 
@@ -29,7 +29,8 @@
 
 .utility
   +hide
-  margin-top: 11px
+  padding: 10px
+  text-align: center
   ul
     margin: 0
     text-align: right
@@ -37,29 +38,38 @@
     display: inline-block
     padding: 0 10px
     list-style-type: none
-    border-right: 1px solid $base-font-color
+  a:hover
+    text-decoration: none
   .active
-    color: $green
     font-weight: bold
-  #dt-contact,
-  #m-contact
-    border-right: none
+    a
+    color: $forest-green
+  .nav-link
+    transition: 0.3s ease
+    background: $green
+    color: #ffffff
+    text-decoration: none
+    border-top: 4px solid $green
+    border-bottom: 4px solid $green
+    padding: 10px 0
+    margin: 0 20px
 
-  +breakpoint($g-tiny)
-    +reveal-hidden
-    +span(9 of 12 last)
-    ul
-      padding-right: 50px
+  .nav-link:hover
+    border-top: 4px solid #ffffff
+    border-bottom: 4px solid #ffffff
+    padding: 6px 0
 
-  +breakpoint($g-tablet)
-    +span(8 of 12 last)
-    margin-top: 19px
-    ul
-      padding-right: 60px
+  // +breakpoint($g-tiny)
+  //   +reveal-hidden
+  //   +span(9 of 12 last)
+  //   ul
+  //     padding-right: 50px
 
   +breakpoint($g-desktop $g-uber-wide)
+    +reveal-hidden
+    +span(8 of 12 last)
     ul
-      padding-right: 70px
+      padding-right: 60px
 
   +breakpoint($g-uber-wide)
     ul
@@ -147,28 +157,6 @@
   .nav-box-3
     margin-top: 20px
 
-
-
-#dt-home,
-#dt-programs,
-#dt-apply,
-#dt-contact
-  +hide
-
-+breakpoint(600px)
-  #dt-home
-    +reveal-hidden-inline
-
-+breakpoint($g-tablet)
-  #m-programs,
-  #m-apply,
-  #m-contact
-    +hide
-  #dt-home,
-  #dt-programs,
-  #dt-apply,
-  #dt-contact
-    +reveal-hidden-inline
 
 .no-js
   .nav-button,
