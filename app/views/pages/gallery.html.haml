@@ -13,7 +13,9 @@
         %br
         %br
         %br
-        - 5.times do
-          .student
-            %img{:src => 'http://dummyimage.com/250x250/999/000&text=Gallery+Pic', :alt => 'dummy image'}
-            %h4.stylist
+        .student
+          %ul  
+          - 5.times do
+            %li
+              %img{:src => 'http://dummyimage.com/250x250/999/000&text=Gallery+Pic', :alt => 'dummy image'}
+              %h4.stylist
