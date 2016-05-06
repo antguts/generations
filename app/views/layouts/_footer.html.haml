@@ -13,10 +13,12 @@
           %li= link_to 'F.A.Q', faq_path
 
       .footer-right
-        = render 'shared/social_links'
-        = render 'shared/phone_number'
-        = render 'shared/email_encryptor'
-        = render 'shared/snail_mail'
+        .col1
+          = render 'shared/social_links'
+          = render 'shared/phone_number'
+          = render 'shared/email_encryptor'
+        .col2
+          = render 'shared/snail_mail'
       %p.copyright
         &copy; Generations Hair Salon
         = Date.today.year
