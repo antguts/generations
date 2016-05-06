@@ -9,14 +9,6 @@
 // Definitions...
 
 $z-index: (
-  key-name:      100,
-  key-name-etc:  99,
+  nav-overlay:  2000,
+  nav-button:   99
 );
-
-// Usage:
-
-// .some-class
-//   +z-index(key-name)
-
-// .some-other-class
-//   +z-index(key-name-etc)

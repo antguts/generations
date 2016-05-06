@@ -50,13 +50,13 @@
       /       .t-more +
 
       %li.t-col.w-1-2.m-1-1
-        .backend-program
+        .stylists
           = link_to stylists_path, class: 't-block hoverable h-16x9' do
             %span.off-screen Links to Facilities.
             .t-content
               %h2 Stylists
             .t-more +
-        .faq
+        .services
           = link_to services_path, class: 't-block hoverable h-16x7' do
             %span.off-screen Links to FAQs.
             .t-content
@@ -64,7 +64,7 @@
             .t-more +
 
       %li.t-col.w-1-2.m-1-1
-        .web-dev-program
+        .gallery
           = link_to gallery_path, class: 't-block hoverable h-16x9' do
             %span.off-screen Links to Web Development Immersive course description.
             .t-content
@@ -72,12 +72,12 @@
             .t-more +
         .other-programs
           .t-block.h-16x7
-            = link_to products_path, class: 't-n-block hoverable summer-program' do
+            = link_to products_path, class: 't-n-block hoverable products' do
               .t-n-content
                 %span.off-screen Links to Summer of Code course description.
                 %h3 Products
               .t-more +
-              = link_to faq_path, class: 't-n-block hoverable launch-program' do
+              = link_to faq_path, class: 't-n-block hoverable faq' do
                 .t-n-content
                   %span.off-screen Links to Launch Program descriptions.
                   %h3 F.A.Q
