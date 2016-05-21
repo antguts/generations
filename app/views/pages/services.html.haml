@@ -4,29 +4,39 @@
 
 .services
   %section.hero
-    .questions
-      // offeset by one to comensate for .utility overlay.
-      %a{href: '#1'} Hair Cuts
-      %a{href: '#2'} Hair Styling
-      %a{href: '#3'} Color Services
-      %a{href: '#4'} Nail Services
-      %a{href: '#5'} Other
+    // offeset by one to comensate for .utility overlay.
+    %ul
+      %li
+        .cuts
+          %a{href: '#1'} Hair Cuts
+      %li
+        .style
+          %a{href: '#2'} Hair Styling
+      %li
+        .color
+          %a{href: '#3'} Color Services
+      %li
+        .nail
+          %a{href: '#4'} Nail Services
+      %li
+        .other
+          %a{href: '#5'} Other
   .container
     %section
 
-      %h3#1
+      %h3
       %br
       %br
       %br
     
       .service-block
-        %h3#2 Hair Cuts
+        %h3#1 Hair Cuts:
         .service
           %p Bang Trim
           %p Childs Cut
-          %p  Childs Cut/blow (up to 12yrs)
+          %p Childs Cut/blow (up to 12yrs)
           %p Gentlemen's Design Cut & Style
-          %p  Womens Haircut
+          %p Womens Haircut
           %p Womens Cut & Style
         .price
           %p $10
@@ -37,7 +47,26 @@
           %p $65
 
       .service-block
-        %h3#3 Hair Styling
+        %h3#2 Hair Styling:
+        .service
+          %p Up-do  
+          %p Shampoo & Blow Dry
+          %p Keratin Treatment 
+          %p Deep Conditioning Treatment
+          %p Hair extensions
+          %p Perm
+          %p Keratin Conditioning Treatment
+        .price
+          %p $85*
+          %p $45
+          %p  *
+          %p $30
+          %p  *
+          %p $100
+          %p $35
+
+      .service-block
+        %h3#3 Color Services:
         .service
           %p 
           %p 
@@ -48,7 +77,7 @@
           %p
 
       .service-block
-        %h3#4 Color Services
+        %h3#4 Nail Services
         .service
           %p 
           %p 
@@ -59,18 +88,7 @@
           %p
 
       .service-block
-        %h3#5 Nail Services
-        .service
-          %p 
-          %p 
-          %p 
-        .price
-          %p
-          %p
-          %p
-
-      .service-block
-        %h3#6 Other
+        %h3#5 Other
         .service
           %p 
           %p 

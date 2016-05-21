@@ -3,12 +3,35 @@
 
 .services
   .hero
-    a
-      display: block
+    padding: 0
     @extend .forest-green
+    ul
+      margin: 0
+      padding: 0
+      li
+        text-align: center
+        margin: 0
+        display:  inline-block
+        height: 100%
+        width: 19.5%
+        .cuts
+          @extend .red
+        .style
+          @extend .blue
+        .color
+          @extend .green
+        .nail
+          @extend .red
+        .other
+          @extend .blue
+
+
+
   .container
     .service-block
-      border: 2px solid $gray
+      // border: 2px solid $gray
+      h3
+        text-decoration:  underline
     .service
       padding-left: 10px
       float: left
