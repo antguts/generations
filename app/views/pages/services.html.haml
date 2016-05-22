@@ -3,25 +3,35 @@
 = nav_at 'Services'
 
 .services
-  %section.hero
-    // offeset by one to comensate for .utility overlay.
-    %ul
-      %li
-        .cuts
-          %a{href: '#1'} Hair Cuts
-      %li
-        .style
-          %a{href: '#2'} Hair Styling
-      %li
-        .color
-          %a{href: '#3'} Color Services
-      %li
-        .nail
-          %a{href: '#4'} Nail Services
-      %li
-        .other
-          %a{href: '#5'} Other
+  .container
+    %section.hero
+      // offeset by one to comensate for .utility overlay.
+      %ul
+        %li
+          .cuts
+            %a{href: '#1', class: "hoverable t-link"} Hair Cuts
+        %li
+          .style
+            %a{href: '#2', class: "hoverable t-link"} Hair Styling
+        %li
+          .color
+            %a{href: '#3', class: "hoverable t-link"} Color Services
+        %li
+          .nail
+            %a{href: '#4', class: "hoverable t-link"} Nail Services
+        %li
+          .other
+            %a{href: '#5', class: "hoverable t-link"} Other
 
+
+
+
+
+
+
+
+
+  .container
     .service-block
       %h3#1 Hair Cuts:
       .service

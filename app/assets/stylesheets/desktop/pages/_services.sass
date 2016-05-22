@@ -3,27 +3,44 @@
 
 .services
   .hero
+    padding: 0
     @extend .forest-green
     ul
       margin: 0
       padding: 0
+      height: 100%
+      @extend .red
       li
-        text-align: center
+        display:  block
+        float: left
         margin: 0
-        display:  inline-block
+        width: 20%
         height: 100%
-        width: 19.5%
+        text-align: center
+        a
+          display: block
+          position: relative
+          height: 100%
+
         .cuts
+          height: 100%
           @extend .red
         .style
+          height: 100%
           @extend .blue
         .color
+          height: 100%
           @extend .green
         .nail
+          height: 100%
           @extend .red
         .other
+          height: 100%
           @extend .blue
 
+  .service-block
+    h3
+      text-decoration: underline
     .service
       width: 50%
       padding-left: 10px
