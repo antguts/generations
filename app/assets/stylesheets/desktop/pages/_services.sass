@@ -4,12 +4,26 @@
 .services
   .hero
     @extend .forest-green
-    a
-      display: block
-  .container
-    h3
-      margin-top: 10px
-      border-bottom: 2px solid $gray
+    ul
+      margin: 0
+      padding: 0
+      li
+        text-align: center
+        margin: 0
+        display:  inline-block
+        height: 100%
+        width: 19.5%
+        .cuts
+          @extend .red
+        .style
+          @extend .blue
+        .color
+          @extend .green
+        .nail
+          @extend .red
+        .other
+          @extend .blue
+
     .service
       width: 50%
       padding-left: 10px
